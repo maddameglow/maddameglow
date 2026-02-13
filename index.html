@@ -1,116 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto 150K | Liberdade Financeira Digital</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberdade Financeira Digital | Projeto 150K</title>
+    <style>
+        /* CSS PURO PARA NÃO DAR ERRO DE TELA AZUL */
+        body { 
+            background-color: #001220; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; padding: 0; text-align: center; 
+        }
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; }
+        
+        .gold-text { color: #D4AF37; font-weight: bold; }
+        .header-logo { font-size: 14px; letter-spacing: 3px; color: #D4AF37; margin: 20px 0; font-weight: 900; text-transform: uppercase; }
+        
+        h1 { font-size: 28px; line-height: 1.2; text-transform: uppercase; margin-bottom: 20px; }
+        .highlight { color: #D4AF37; font-size: 36px; display: block; }
+        
+        .card { 
+            background: rgba(255, 255, 255, 0.05); 
+            border: 1px solid #D4AF37; 
+            border-radius: 20px; 
+            padding: 25px; 
+            margin-top: 20px;
+        }
+        
+        input { 
+            width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 8px; 
+            border: 1px solid #333; background: #000; color: #fff; box-sizing: border-box;
+        }
+        
+        .btn { 
+            background: linear-gradient(180deg, #D4AF37 0%, #B8860B 100%); 
+            color: #000; font-weight: bold; padding: 18px; border: none; 
+            border-radius: 8px; width: 100%; cursor: pointer; font-size: 16px; 
+            text-transform: uppercase; text-decoration: none; display: block;
+        }
 
-<style>
-:root {
-    --azul-premium: #001A2C;
-    --dourado: #D4AF37;
-}
-
-body {
-    background: var(--azul-premium);
-    font-family: 'Montserrat', sans-serif;
-}
-
-.gold-text {
-    background: linear-gradient(90deg, #B8860B, #FFD700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.btn-gold {
-    background: linear-gradient(180deg, #FFD700 0%, #B8860B 100%);
-    transition: 0.3s;
-}
-
-.btn-gold:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(212,175,55,0.7);
-}
-</style>
+        /* PROVA SOCIAL */
+        .testimonial { text-align: left; background: rgba(255, 255, 255, 0.03); padding: 15px; border-radius: 12px; margin-bottom: 15px; border-left: 3px solid #D4AF37; }
+        .profile { display: flex; align-items: center; margin-bottom: 10px; }
+        .profile img { width: 45px; height: 45px; border-radius: 50%; border: 2px solid #D4AF37; margin-right: 12px; }
+        .profile-info b { font-size: 14px; display: block; }
+        .profile-info span { font-size: 11px; color: #D4AF37; }
+        
+        .hidden { display: none; }
+    </style>
 </head>
+<body>
 
-<body class="text-white">
+<div class="container">
+    <div class="header-logo">Liberdade Financeira Digital</div>
 
-<!-- HERO -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <h1 class="text-4xl md:text-6xl font-black mb-6">
-        Construa sua <span class="gold-text">Liberdade Financeira</span> Digital
-    </h1>
-    <p class="text-lg md:text-xl max-w-2xl mb-8 text-gray-300">
-        O método validado para sair do zero e faturar até R$150.000 com negócios digitais estruturados.
-    </p>
-    <a href="#oferta" class="btn-gold px-10 py-4 rounded-full font-bold text-black text-lg">
-        Quero Acessar Agora
-    </a>
-</section>
+    <h1>Alcance os Seus Primeiros <br><span class="highlight">R$ 150.000,00</span></h1>
+    
+    <p style="color: #ccc; font-size: 14px;">Aprenda a estratégia de <b>Desligamento Controlado</b> e mude a sua realidade financeira hoje.</p>
 
-<!-- PROVA -->
-<section class="py-20 bg-black/30 text-center">
-    <h2 class="text-3xl font-bold mb-12">Resultados Reais</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-        <div class="glass p-8 bg-white/5 rounded-2xl border border-yellow-500/20">
-            <h3 class="text-4xl font-black gold-text">+150K</h3>
-            <p>Faturamento validado</p>
-        </div>
-        <div class="glass p-8 bg-white/5 rounded-2xl border border-yellow-500/20">
-            <h3 class="text-4xl font-black gold-text">+2.000</h3>
-            <p>Alunos impactados</p>
-        </div>
-        <div class="glass p-8 bg-white/5 rounded-2xl border border-yellow-500/20">
-            <h3 class="text-4xl font-black gold-text">4.9⭐</h3>
-            <p>Avaliação média</p>
-        </div>
-    </div>
-</section>
-
-<!-- OFERTA -->
-<section id="oferta" class="py-20 text-center px-6">
-    <h2 class="text-3xl md:text-4xl font-black mb-10">
-        O que você recebe no <span class="gold-text">Projeto 150K</span>
-    </h2>
-
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
-        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20">
-            ✔ Estratégia completa de vendas digitais
-        </div>
-        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20">
-            ✔ Modelo de funil validado
-        </div>
-        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20">
-            ✔ Scripts prontos de copy
-        </div>
-        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20">
-            ✔ Acesso vitalício
-        </div>
+    <div id="capture-section" class="card">
+        <h3 style="margin-top: 0;">🎧 Podcast Gratuito</h3>
+        <p style="font-size: 12px; color: #aaa;">Inscreva-se para ouvir o áudio exclusivo e baixar o E-book de Boas-vindas.</p>
+        
+        <form id="leadForm">
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="email" placeholder="O seu melhor e-mail" required>
+            <button type="submit" class="btn">Quero Aceder Agora</button>
+        </form>
     </div>
 
-    <div class="mt-12">
-        <a href="#" class="btn-gold px-12 py-5 rounded-full font-bold text-black text-xl">
-            Garantir Minha Vaga
-        </a>
+    <div id="podcast-section" class="card hidden">
+        <h3 class="gold-text">ACESSO LIBERADO! 🎙️</h3>
+        <p style="font-size: 13px;">Ouve agora a estratégia completa:</p>
+        <audio id="player" controls style="width: 100%; margin: 15px 0;">
+            <source src="https://drive.google.com/uc?export=download&id=1Cu2MnOqP4UOKEgFyHgD3QHJ3XAqtM2bt" type="audio/mpeg">
+        </audio>
+        <a href="https://go.hotmart.com/S104320910K" class="btn">Quero o Método Completo</a>
     </div>
-</section>
 
-<!-- ESCASSEZ -->
-<section class="py-16 bg-black/40 text-center">
-    <h2 class="text-2xl font-bold mb-4">⚠️ Vagas Limitadas</h2>
-    <p class="text-gray-300 mb-6">Essa oferta pode sair do ar a qualquer momento.</p>
-    <a href="#" class="btn-gold px-10 py-4 rounded-full font-bold text-black">
-        Quero Entrar Agora
-    </a>
-</section>
+    <h2 style="font-size: 20px; margin-top: 40px; text-transform: uppercase;" class="gold-text">Resultados de Alunos</h2>
+    
+    <div class="testimonial">
+        <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Aluno">
+            <div class="profile-info">
+                <b>Ricardo Santos</b>
+                <span>Faturou R$ 12.500 no 1º mês</span>
+            </div>
+        </div>
+        <p style="font-size: 12px; color: #ddd; margin: 0;">"O método é direto ao ponto. Saí da CLT e agora trabalho de onde eu quiser."</p>
+    </div>
 
-<!-- FOOTER -->
-<footer class="py-10 text-center text-gray-400 border-t border-white/10">
-    © 2026 Projeto 150K - Todos os direitos reservados
-</footer>
+    <div class="testimonial">
+        <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Aluna">
+            <div class="profile-info">
+                <b>Juliana Lima</b>
+                <span>Faturou R$ 48.000 em 60 dias</span>
+            </div>
+        </div>
+        <p style="font-size: 12px; color: #ddd; margin: 0;">"Nunca vi nada igual sobre Tráfego Orgânico. Vale cada cêntimo do investimento."</p>
+    </div>
+
+    <div class="card" style="border: none; background: #001c30;">
+        <p style="font-size: 14px; font-weight: bold;">Índice de Satisfação: ⭐ 9.8/10</p>
+        <p style="font-size: 11px; color: #aaa;">Mais de 4.500 alunos transformados em 2026.</p>
+    </div>
+
+    <footer style="margin-top: 40px; padding-bottom: 20px; font-size: 10px; color: #444;">
+        LIBERDADE FINANCEIRA DIGITAL &copy; 2026<br>
+        Todos os direitos reservados.
+    </footer>
+</div>
+
+<script>
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('capture-section').classList.add('hidden');
+        document.getElementById('podcast-section').classList.remove('hidden');
+        document.getElementById('player').play();
+    });
+</script>
 
 </body>
 </html>
