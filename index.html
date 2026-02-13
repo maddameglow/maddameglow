@@ -3,48 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liberdade Financeira Digital | 150K</title>
+    <title>Liberdade Financeira Digital | Podcast Exclusivo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #000b14; font-family: 'Montserrat', sans-serif; color: white; }
+        body { background: #000b14; color: white; font-family: 'Montserrat', sans-serif; }
         .gold-gradient { background: linear-gradient(90deg, #D4AF37, #F1C40F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn-gold { background: linear-gradient(180deg, #D4AF37 0%, #B8860B 100%); box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
-        .card-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.3); }
+        .bg-gold { background: linear-gradient(180deg, #D4AF37 0%, #B8860B 100%); }
+        .card-vidro { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.2); }
+        .hidden { display: none; }
     </style>
 </head>
-<body>
-    <div class="min-h-screen flex flex-col items-center justify-center px-6 py-10 text-center">
-        <div class="mb-4 inline-block px-4 py-1 rounded-full border border-[#D4AF37] text-[#D4AF37] text-xs font-bold uppercase tracking-widest">
-            Método Validado 2026
-        </div>
-        
-        <h1 class="text-3xl md:text-6xl font-black mb-6 leading-tight">
-            FATURE <span class="gold-gradient text-4xl md:text-7xl">R$ 150 MIL</span> <br> EM 90 DIAS
-        </h1>
+<body class="antialiased min-h-screen flex flex-col items-center py-10 px-6">
 
-        <p class="text-gray-400 text-sm md:text-lg mb-8 max-w-md">
-            Pare de tentar e comece a lucrar. O guia definitivo para sua liberdade financeira através do digital.
-        </p>
-
-        <div class="w-full max-w-lg mb-10 card-glass rounded-2xl p-1">
-            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80" class="rounded-xl w-full shadow-2xl" alt="Riqueza">
-        </div>
-
-        <a href="https://go.hotmart.com/S104320910K" class="btn-gold w-full max-w-xs py-5 rounded-xl text-black font-black text-xl uppercase transition-transform active:scale-95">
-            QUERO MEU ACESSO
-        </a>
-
-        <div class="mt-12 grid grid-cols-2 gap-4 w-full max-w-sm">
-            <div class="card-glass p-4 rounded-xl">
-                <p class="text-[#D4AF37] font-bold text-lg">7 Dias</p>
-                <p class="text-gray-500 text-xs uppercase">Garantia</p>
-            </div>
-            <div class="card-glass p-4 rounded-xl">
-                <p class="text-[#D4AF37] font-bold text-lg">VIP</p>
-                <p class="text-gray-500 text-xs uppercase">Suporte</p>
-            </div>
-        </div>
+    <div class="mb-8 text-center">
+        <span class="gold-gradient font-black text-2xl uppercase tracking-tighter">Liberdade Financeira Digital</span>
     </div>
+
+    <div id="capture-section" class="max-w-md w-full card-vidro p-8 rounded-3xl text-center shadow-2xl">
+        <h1 class="text-2xl font-black mb-4 uppercase">Libere seu <span class="gold-gradient">Acesso Gratuito</span></h1>
+        <p class="text-gray-400 text-sm mb-6">Ouça agora o Podcast exclusivo sobre Desligamento Controlado e Tráfego Orgânico.</p>
+        
+        <form id="lead-form" class="space-y-4">
+            <input type="text" placeholder="Seu Nome completo" required class="w-full p-4 rounded-xl bg-black/50 border border-gray-700 focus:border-[#D4AF37] outline-none">
+            <input type="email" placeholder="Seu melhor e-mail" required class="w-full p-4 rounded-xl bg-black/50 border border-gray-700 focus:border-[#D4AF37] outline-none">
+            <button type="submit" class="bg-gold w-full py-4 rounded-xl text-black font-black uppercase tracking-widest hover:scale-105 transition shadow-lg">
+                Quero ouvir agora
+            </button>
+        </form>
+        <p class="text-[10px] text-gray-600 mt-4 italic">Seus dados estão seguros conosco.</p>
+    </div>
+
+    <div id="podcast-section" class="hidden max-w-md w-full card-vidro p-8 rounded-3xl text-center shadow-2xl border-gold animate-bounce-in">
+        <div class="mb-6">
+            <div class="w-24 h-24 bg-gold mx-auto rounded-full flex items-center justify-center mb-4 shadow-xl">
+                <span class="text-4xl text-black">🎙️</span>
+            </div>
+            <h2 class="text-xl font-bold gold-gradient uppercase">Acesso Liberado!</h2>
+            <p class="text-gray-400 text-xs mt-2">Episódio: Desligamento Controlado e Tráfego Orgânico</p>
+        </div>
+
+        <audio controls class="w-full mb-8">
+            <source src="https://drive.google.com/uc?export=download&id=1Cu2MnOqP4UOKEgFyHgD3QHJ3XAqtM2bt" type="audio/mpeg">
+            Seu navegador não suporta o áudio.
+        </audio>
+
+        <hr class="border-gray-800 mb-8">
+
+        <h3 class="text-sm font-bold mb-4 uppercase">Gostou do conteúdo? Dê o próximo passo:</h3>
+        <a href="https://go.hotmart.com/S104320910K" target="_blank" class="bg-gold block w-full py-4 rounded-xl text-black font-black uppercase shadow-lg hover:brightness-110">
+            Quero o Método Completo
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('lead-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Aqui você poderia integrar com Mailchimp/ActiveCampaign
+            document.getElementById('capture-section').classList.add('hidden');
+            document.getElementById('podcast-section').classList.remove('hidden');
+        });
+    </script>
+
+    <footer class="mt-auto pt-10 text-gray-600 text-[10px] uppercase tracking-widest">
+        &copy; 2026 Projeto Liberdade Financeira
+    </footer>
 </body>
 </html>
