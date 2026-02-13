@@ -3,140 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liberdade Financeira Digital | Método 150K</title>
+    <title>Liberdade Financeira Digital | Projeto 150K</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #001220; --gold: #D4AF37; --gold-light: #F1C40F; }
-        body { background-color: var(--navy); color: white; font-family: 'Montserrat', sans-serif; }
-        .gold-gradient { background: linear-gradient(90deg, #D4AF37, #F1C40F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .bg-gold { background: linear-gradient(180deg, #D4AF37 0%, #B8860B 100%); }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(212, 175, 55, 0.2); }
-        .border-gold { border: 1px solid var(--gold); }
-        .text-gold { color: var(--gold); }
+        :root {
+            --azul-premium: #001A2C; /* Azul marinho profundo e rico */
+            --dourado-real: #D4AF37;
+            --dourado-brilho: #FFD700;
+        }
+        body { 
+            background-color: var(--azul-premium); 
+            color: white; 
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(90deg, #B8860B, #D4AF37, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-gold {
+            background: linear-gradient(180deg, #D4AF37 0%, #B8860B 100%);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+        }
         .hidden { display: none; }
     </style>
 </head>
 <body class="antialiased">
 
-    <div class="bg-gold text-black text-[10px] font-black uppercase text-center py-2 tracking-widest">
-        Inscrições Abertas - Turma Limitada 2026 - Restam 07 Vagas
-    </div>
-
-    <header class="max-w-6xl mx-auto pt-16 pb-12 px-6 text-center">
-        <h1 class="text-3xl md:text-7xl font-black mb-6 leading-tight uppercase">
-            Transforme sua Vida com o <br><span class="gold-gradient">Projeto 150K</span>
-        </h1>
-        <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            Aprenda a metodologia de <span class="text-white font-bold">Desligamento Controlado</span> que permitiu a milhares de alunos faturarem alto no digital.
-        </p>
-
-        <div id="capture-box" class="max-w-lg mx-auto glass p-8 rounded-3xl shadow-2xl relative border-gold">
-            <h3 class="text-xl font-bold mb-6 gold-gradient uppercase">Libere seu Acesso Gratuito</h3>
-            <p class="text-sm text-gray-400 mb-6">Receba o Áudio Exclusivo + Guia em PDF</p>
-            <form id="lead-form" class="space-y-4 text-left">
-                <input type="text" placeholder="Seu Nome Completo" required class="w-full p-4 rounded-xl bg-black/40 border border-gray-800 focus:border-gold outline-none">
-                <input type="email" placeholder="Seu Melhor E-mail" required class="w-full p-4 rounded-xl bg-black/40 border border-gray-800 focus:border-gold outline-none">
-                <button type="submit" class="bg-gold w-full py-5 rounded-xl text-black font-black uppercase text-sm tracking-widest shadow-xl hover:scale-105 transition">
-                    Liberar Agora
-                </button>
-            </form>
-        </div>
-
-        <div id="podcast-box" class="hidden max-w-lg mx-auto glass p-8 rounded-3xl border-gold animate-bounce-in">
-            <h3 class="text-xl font-bold gold-gradient mb-4 uppercase">Acesso Liberado!</h3>
-            <audio id="audio-player" controls class="w-full mb-6">
-                <source src="https://drive.google.com/uc?export=download&id=1Cu2MnOqP4UOKEgFyHgD3QHJ3XAqtM2bt" type="audio/mpeg">
-            </audio>
-            <a href="https://go.hotmart.com/S104320910K" class="bg-gold block w-full py-5 rounded-xl text-black font-black uppercase shadow-xl">
-                QUERO O MÉTODO COMPLETO 150K
-            </a>
-        </div>
-    </header>
-
-    <section class="py-16 bg-black/40">
-        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center px-6">
-            <div>
-                <p class="text-4xl font-black gold-gradient">150K</p>
-                <p class="text-gray-500 text-[10px] uppercase font-bold tracking-widest">Média de Faturamento</p>
-            </div>
-            <div>
-                <p class="text-4xl font-black gold-gradient">98%</p>
-                <p class="text-gray-500 text-[10px] uppercase font-bold tracking-widest">Índice de Satisfação</p>
-            </div>
-            <div>
-                <p class="text-4xl font-black gold-gradient">4.500+</p>
-                <p class="text-gray-500 text-[10px] uppercase font-bold tracking-widest">Alunos Transformados</p>
-            </div>
-            <div>
-                <p class="text-4xl font-black gold-gradient">7 DIAS</p>
-                <p class="text-gray-500 text-[10px] uppercase font-bold tracking-widest">Garantia Blindada</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="glass p-1 rounded-2xl border-gold">
-                <img src="https://via.placeholder.com/600x800/001220/D4AF37?text=EBOOK+150K" alt="E-book" class="rounded-xl w-full">
-            </div>
-            <div>
-                <h2 class="text-3xl font-black mb-8 gold-gradient uppercase">O que você vai descobrir no E-book:</h2>
-                <ul class="space-y-6">
-                    <li class="flex items-start">
-                        <span class="text-gold mr-4">✔</span>
-                        <p class="text-gray-300"><span class="text-white font-bold">O Código de 150K:</span> O passo a passo matemático para escalar seu faturamento.</p>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-gold mr-4">✔</span>
-                        <p class="text-gray-300"><span class="text-white font-bold">Tráfego Orgânico Viral:</span> Como atrair clientes sem gastar com anúncios.</p>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-gold mr-4">✔</span>
-                        <p class="text-gray-300"><span class="text-white font-bold">A Mente Inabalável:</span> O segredo psicológico por trás dos grandes players.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-black/20 text-center px-6">
-        <h2 class="text-3xl font-black mb-12 uppercase">Alunos <span class="gold-gradient">Transformados</span></h2>
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
-            <div class="glass p-8 rounded-3xl">
-                <p class="italic text-gray-400 mb-6">"Em 45 dias apliquei o método e bati meus primeiros 12k. O suporte é incrível!"</p>
-                <p class="font-bold text-gold italic">— João P., Empresário</p>
-            </div>
-            <div class="glass p-8 rounded-3xl border-gold">
-                <p class="italic text-gray-400 mb-6">"Saí da CLT com o Desligamento Controlado e hoje faturou 20k/mês de casa."</p>
-                <p class="font-bold text-gold italic">— Maria S., Digital Marketer</p>
-            </div>
-            <div class="glass p-8 rounded-3xl">
-                <p class="italic text-gray-400 mb-6">"Nunca vi nada igual. O conteúdo de tráfego orgânico vale 10x o preço do curso."</p>
-                <p class="font-bold text-gold italic">— Lucas M., Estrategista</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 text-center text-gray-600 border-t border-gray-900">
-        <p class="mb-4 text-[10px] font-black uppercase tracking-widest gold-gradient">Liberdade Financeira Digital © 2026</p>
-        <div class="text-[8px] max-w-2xl mx-auto px-6">
-            Este site não tem vínculo com Google ou Facebook. Resultados podem variar. A persistência é o único caminho para o sucesso.
-        </div>
-    </footer>
-
-    <script>
-        const form = document.getElementById('lead-form');
-        const captureBox = document.getElementById('capture-box');
-        const podcastBox = document.getElementById('podcast-box');
-        const audio = document.getElementById('audio-player');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            captureBox.classList.add('hidden');
-            podcastBox.classList.remove('hidden');
-            audio.play();
-        });
-    </script>
-</body>
-</html>
+    <nav class="p-6 text-center border-b border-white/10 bg-black/20">
