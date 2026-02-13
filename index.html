@@ -3,131 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maddame Glow | Skin Secrets</title>
+    <title>Maddame Glow | O Segredo da Pele de Porcelana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --rose-gold: #E8B4B8;
-            --deep-rose: #C97C82;
-            --cream: #FFFDFB;
-            --dark: #1A1A1A;
+            --gold-primary: #C5A059; /* Dourado das embalagens */
+            --gold-light: #F5E6D3;   /* Champagne seda */
+            --gold-gradient: linear-gradient(135deg, #C5A059 0%, #F5E6D3 50%, #C5A059 100%);
+            --dark-coffee: #3D2B1F;  /* Marrom do logo */
+            --cream-bg: #FFFDF9;
+            --white: #FFFFFF;
         }
         
-        body { background-color: var(--cream); color: var(--dark); font-family: 'Georgia', serif; margin: 0; padding: 0; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; text-align: center; }
+        body { 
+            background-color: var(--cream-bg); 
+            color: var(--dark-coffee); 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png'); /* Textura sutil */
+        }
+
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; }
         
-        /* HEADER */
-        .header { letter-spacing: 5px; text-transform: uppercase; padding: 30px 0; color: var(--deep-rose); font-size: 18px; border-bottom: 1px solid #eee; }
+        /* HEADER - Estilo Logo */
+        .header { 
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-style: italic;
+            letter-spacing: -1px;
+            padding: 40px 0 20px; 
+            color: var(--dark-coffee);
+            font-weight: 700;
+        }
+        .header::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: var(--gold-primary);
+            margin: 10px auto;
+        }
         
-        /* HERO */
-        h1 { font-size: 32px; font-weight: 300; line-height: 1.2; margin: 40px 0 20px; color: var(--dark); }
-        .glow-span { color: var(--deep-rose); font-style: italic; }
+        /* HERO SECTION */
+        h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 38px; 
+            font-weight: 400; 
+            line-height: 1.1; 
+            margin: 20px 0; 
+            color: var(--dark-coffee); 
+        }
+        .glow-span { 
+            display: block;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
         
-        /* CURSO / CAPTURA */
+        .sub-headline {
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #8c7a6b;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        /* CARD DE CAPTURA - Estética Luxo */
         .course-card { 
-            background: #fff; border: 1px solid var(--rose-gold); padding: 30px; 
-            border-radius: 0; box-shadow: 10px 10px 0px var(--rose-gold);
-            margin-bottom: 50px;
+            background: var(--white); 
+            border: 1px solid var(--gold-light); 
+            padding: 40px 30px; 
+            box-shadow: 0 20px 40px rgba(197, 160, 89, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--gold-gradient);
         }
         
+        h2 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; }
+
         input { 
-            width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; 
-            box-sizing: border-box; font-family: sans-serif;
+            width: 100%; padding: 18px; margin-bottom: 15px; 
+            border: 1px solid #E2D9D0; 
+            background: #FCFAF8;
+            box-sizing: border-box; 
+            font-family: 'Montserrat', sans-serif;
+            outline: none;
+            transition: 0.3s;
         }
+        input:focus { border-color: var(--gold-primary); }
         
         .btn-maddame { 
-            background: var(--dark); color: white; padding: 20px; border: none; 
-            width: 100%; font-size: 14px; text-transform: uppercase; letter-spacing: 2px;
-            cursor: pointer; transition: 0.3s;
+            background: var(--dark-coffee); 
+            color: var(--gold-light); 
+            padding: 20px; 
+            border: none; 
+            width: 100%; 
+            font-size: 13px; 
+            font-weight: 600;
+            text-transform: uppercase; 
+            letter-spacing: 3px;
+            cursor: pointer; 
+            transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(61, 43, 31, 0.2);
         }
-        .btn-maddame:hover { background: var(--deep-rose); }
+        .btn-maddame:hover { 
+            background: var(--gold-primary); 
+            color: var(--white);
+            transform: translateY(-2px);
+        }
 
-        /* VITRINE DE PRODUTOS */
-        .shop-section { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
-        .product-item { text-align: left; }
-        .product-img { width: 100%; height: 200px; background: #f9f9f9; border: 1px solid #eee; display: flex; items-center; justify-content: center; overflow: hidden; }
+        /* SHOP & PRODUTOS */
+        .shop-section { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 50px; }
+        .product-img { 
+            width: 100%; height: 220px; 
+            background: #fff; 
+            border: 1px solid var(--gold-light); 
+            display: flex; align-items: center; justify-content: center; 
+            overflow: hidden; 
+            transition: 0.3s;
+        }
+        .product-img:hover { border-color: var(--gold-primary); }
         .product-img img { width: 100%; height: 100%; object-fit: cover; }
-        .product-name { font-size: 12px; font-weight: bold; margin: 10px 0 5px; text-transform: uppercase; }
-        .product-price { font-size: 14px; color: var(--deep-rose); }
+        
+        .product-name { font-size: 11px; font-weight: 600; margin: 15px 0 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .product-price { font-size: 13px; color: var(--gold-primary); font-weight: bold; }
 
-        /* PROVA SOCIAL / ANTES E DEPOIS */
-        .results { margin-top: 60px; padding: 30px; background: #FDF5F6; }
-        .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
-        .result-img { border-radius: 0; width: 100%; border: 2px solid white; }
+        /* RESULTADOS (ANTES E DEPOIS) */
+        .results { 
+            margin-top: 60px; 
+            padding: 40px 20px; 
+            background: linear-gradient(to bottom, #FFFDFB, #F5E6D3); 
+            border-top: 1px solid var(--gold-light);
+        }
+        .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
+        .result-img { width: 100%; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 
         .hidden { display: none; }
+        
+        footer { margin-top: 80px; padding-bottom: 60px; font-size: 9px; color: #B3A497; letter-spacing: 2px; line-height: 2; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">Maddame Glow</div>
+    <div class="header">maddame glow</div>
 
-    <h1>O Segredo da <br><span class="glow-span">Pele Eterna</span></h1>
-    <p style="font-size: 14px; color: #666; margin-bottom: 30px;">O método exclusivo de rejuvenescimento facial que está parando o mercado de luxo.</p>
+    <p class="sub-headline">Estética Old Money & Skincare de Luxo</p>
+
+    <h1>O Segredo da <br><span class="glow-span">Pele de Porcelana</span></h1>
+    <p style="font-size: 14px; color: #7a6a5d; margin-bottom: 40px; font-style: italic;">
+        "A verdadeira sofisticação começa na saúde da sua pele."
+    </p>
 
     <div id="capture-section" class="course-card">
-        <h2 style="font-size: 18px; text-transform: uppercase; letter-spacing: 2px;">Workshop Skin Secrets</h2>
-        <p style="font-size: 12px; color: #888; margin-bottom: 20px;">Assista à aula gratuita e libere o protocolo em áudio.</p>
+        <h2>Workshop Skin Secrets</h2>
+        <p style="font-size: 12px; color: #8c7a6b; margin-bottom: 25px;">Inscreva-se para liberar o protocolo em áudio e o guia de ativos raros.</p>
         
         <form id="leadForm">
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="E-mail" required>
-            <button type="submit" class="btn-maddame">Revelar Protocolo</button>
+            <input type="text" id="name" placeholder="NOME COMPLETO" required>
+            <input type="email" id="email" placeholder="SEU MELHOR E-MAIL" required>
+            <button type="submit" class="btn-maddame">Revelar o Protocolo</button>
         </form>
     </div>
 
     <div id="podcast-section" class="course-card hidden">
-        <h3 style="color: var(--deep-rose);">PROTOCOLO LIBERADO! 🎙️</h3>
-        <p style="font-size: 12px;">Ouça agora as instruções da Dra. sobre o rejuvenescimento celular:</p>
-        <audio id="player" controls style="width: 100%; margin: 20px 0;">
+        <h3 style="color: var(--gold-primary); font-family: 'Playfair Display';">ACESSO LIBERADO 🎙️</h3>
+        <p style="font-size: 13px;">Ouça agora o Protocolo de Rejuvenescimento Maddame Glow:</p>
+        <audio id="player" controls style="width: 100%; margin: 25px 0;">
             <source src="https://drive.google.com/uc?export=download&id=1Cu2MnOqP4UOKEgFyHgD3QHJ3XAqtM2bt" type="audio/mpeg">
         </audio>
-        <a href="https://go.hotmart.com/S104320910K" class="btn-maddame" style="text-decoration: none;">Comprar Curso Completo</a>
+        <a href="https://go.hotmart.com/S104320910K" class="btn-maddame" style="text-decoration: none; display: block;">Quero o Método Completo</a>
     </div>
 
-    <h2 style="font-size: 16px; letter-spacing: 3px; margin-top: 60px; text-transform: uppercase;">Maddame Shop</h2>
+    <h2 style="font-size: 14px; letter-spacing: 4px; margin-top: 80px; text-transform: uppercase; color: var(--gold-primary);">The Shop</h2>
     <div class="shop-section">
         <div class="product-item">
             <div class="product-img">
-                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?auto=format&fit=crop&w=300&q=80" alt="Serum">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?auto=format&fit=crop&w=500&q=80" alt="Sérum Glow">
             </div>
-            <p class="product-name">Sérum Glow Infinito</p>
-            <p class="product-price">R$ 189,00</p>
+            <p class="product-name">Sérum Infinito</p>
+            <p class="product-price">R$ 189</p>
         </div>
         <div class="product-item">
             <div class="product-img">
-                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=300&q=80" alt="Creme">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=500&q=80" alt="Creme">
             </div>
-            <p class="product-name">Creme Rejuvenescedor</p>
-            <p class="product-price">R$ 245,00</p>
+            <p class="product-name">Creme Satin</p>
+            <p class="product-price">R$ 245</p>
         </div>
     </div>
 
     <div class="results">
-        <h3 style="font-size: 14px; text-transform: uppercase;">Resultados em 21 Dias</h3>
+        <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 2px;">Transformação 21 Dias</h3>
         <div class="result-grid">
             <div>
-                <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=300&q=80" class="result-img" alt="Antes">
-                <p style="font-size: 10px;">Dia 01</p>
+                <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=400&q=80" class="result-img" alt="Antes">
+                <p style="font-size: 10px; margin-top: 8px;">SEMANA 1</p>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=300&q=80" class="result-img" alt="Depois">
-                <p style="font-size: 10px;">Dia 21</p>
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=400&q=80" class="result-img" alt="Depois">
+                <p style="font-size: 10px; margin-top: 8px;">SEMANA 3</p>
             </div>
         </div>
-        <p style="font-size: 12px; color: #666; margin-top: 15px; font-style: italic;">"Minha pele recuperou o viço que eu não via há 10 anos." — Luciana F.</p>
+        <p style="font-size: 12px; color: #666; margin-top: 25px; font-style: italic; font-family: 'Playfair Display';">
+            "Minha pele recuperou o viço que eu não via há 10 anos. Um divisor de águas." — Luciana F.
+        </p>
     </div>
 
-    <footer style="margin-top: 80px; padding-bottom: 40px; font-size: 10px; color: #999; letter-spacing: 2px;">
-        MADDAME GLOW SKINCARE &copy; 2026<br>
-        POLÍTICA DE PRIVACIDADE | TERMOS DE USO
+    <footer>
+        MADDAME GLOW &copy; 2026<br>
+        DESIGNED FOR EXCELLENCE<br>
+        <span style="opacity: 0.5;">PRIVACIDADE | TERMOS</span>
     </footer>
 </div>
 
 <script>
     document.getElementById('leadForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        document.getElementById('capture-section').classList.add('hidden');
+        // Aqui você pode integrar com o seu serviço de e-mail (Mailchimp, RD, etc)
+        document.getElementById('capture-section').style.display = 'none';
         document.getElementById('podcast-section').classList.remove('hidden');
         document.getElementById('player').play();
     });
