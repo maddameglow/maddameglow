@@ -1,45 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liberdade Financeira Digital | Projeto 150K</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --azul-premium: #001A2C; /* Azul marinho profundo e rico */
-            --dourado-real: #D4AF37;
-            --dourado-brilho: #FFD700;
-        }
-        body { 
-            background-color: var(--azul-premium); 
-            color: white; 
-            font-family: 'Montserrat', sans-serif;
-        }
-        .gold-gradient {
-            background: linear-gradient(90deg, #B8860B, #D4AF37, #FFD700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .btn-gold {
-            background: linear-gradient(180deg, #D4AF37 0%, #B8860B 100%);
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
-            transition: all 0.3s ease;
-        }
-        .btn-gold:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 20px;
-        }
-        .hidden { display: none; }
-    </style>
-</head>
-<body class="antialiased">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto 150K | Liberdade Financeira Digital</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <nav class="p-6 text-center border-b border-white/10 bg-black/20">
+<style>
+:root {
+    --azul-premium: #001A2C;
+    --dourado: #D4AF37;
+}
+
+body {
+    background: var(--azul-premium);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gold-text {
+    background: linear-gradient(90deg, #B8860B, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-gold {
+    background: linear-gradient(180deg, #FFD700 0%, #B8860B 100%);
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(212,175,55,0.7);
+}
+</style>
+</head>
+
+<body class="text-white">
+
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-4xl md:text-6xl font-black mb-6">
+        Construa sua <span class="gold-text">Liberdade Financeira</span> Digital
+    </h1>
+    <p class="text-lg md:text-xl max-w-2xl mb-8 text-gray-300">
+        O método validado para sair do zero e faturar até R$150.000 com negócios digitais estruturados.
+    </p>
+    <a href="#oferta" class="btn-gold px-10 py-4 rounded-full font-bold text-black text-lg">
+        Quero Acessar Agora
+    </a>
+</section>
+
+<!-- PROVA -->
+<section class="py-20 bg-black/30 text-center">
+    <h2 class="text-3xl font-bold mb-12">Resultados Reais</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+        <div class="glass p-8 bg-white/5 rounded-2xl border border-yellow-500/20">
+            <h3 class="text-4xl font-black gold-text">+150K</h3>
+            <p>Faturamento validado</p>
+        </div>
+        <div class="glass p-8 bg-white/5 rounded-2xl border border-yellow-500/20">
+            <h3 class="text-4xl font-black gold-text">+2.000</h3>
+            <p>Alunos impactados</p>
+        </div>
+        <div class="glass p-8 bg-white/5 rounded-2xl border border-yellow-500/20">
+            <h3 class="text-4xl font-black gold-text">4.9⭐</h3>
+            <p>Avaliação média</p>
+        </div>
+    </div>
+</section>
+
+<!-- OFERTA -->
+<section id="oferta" class="py-20 text-center px-6">
+    <h2 class="text-3xl md:text-4xl font-black mb-10">
+        O que você recebe no <span class="gold-text">Projeto 150K</span>
+    </h2>
+
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20">
+            ✔ Estratégia completa de vendas digitais
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20">
+            ✔ Modelo de funil validado
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20">
+            ✔ Scripts prontos de copy
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl border border-yellow-500/20">
+            ✔ Acesso vitalício
+        </div>
+    </div>
+
+    <div class="mt-12">
+        <a href="#" class="btn-gold px-12 py-5 rounded-full font-bold text-black text-xl">
+            Garantir Minha Vaga
+        </a>
+    </div>
+</section>
+
+<!-- ESCASSEZ -->
+<section class="py-16 bg-black/40 text-center">
+    <h2 class="text-2xl font-bold mb-4">⚠️ Vagas Limitadas</h2>
+    <p class="text-gray-300 mb-6">Essa oferta pode sair do ar a qualquer momento.</p>
+    <a href="#" class="btn-gold px-10 py-4 rounded-full font-bold text-black">
+        Quero Entrar Agora
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-gray-400 border-t border-white/10">
+    © 2026 Projeto 150K - Todos os direitos reservados
+</footer>
+
+</body>
+</html>
