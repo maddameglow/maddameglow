@@ -6,102 +6,131 @@
     <title>Portal A Ruptura | Hub de Liberdade Digital</title>
     <style>
         :root {
-            --primary: #00ff41; /* Verde Matrix/Sucesso */
+            --primary: #00ff41; 
             --bg: #0a0a0a;
             --card: #1a1a1a;
             --text: #ffffff;
+            --accent: #ff0055;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
             line-height: 1.6;
         }
         header {
-            padding: 2rem;
+            padding: 3rem 1rem;
             text-align: center;
             border-bottom: 2px solid var(--primary);
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
         }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 1rem;
-        }
-        /* Widget Mensagem Diária */
+        .container { max-width: 1000px; margin: auto; padding: 2rem; }
+        
         .daily-briefing {
             background: var(--card);
             border-left: 5px solid var(--primary);
             padding: 1.5rem;
-            margin: 2rem 0;
+            margin-bottom: 3rem;
         }
-        /* Seção de Notícias/Tendências */
+
+        /* Esteira de Produtos */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        .card {
+        .product-card {
             background: var(--card);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        .card:hover { border: 1px solid var(--primary); }
-        .badge {
-            background: var(--primary);
-            color: black;
-            padding: 0.2rem 0.5rem;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-        /* Botão de Conversão */
-        .cta-button {
-            display: block;
-            width: 100%;
-            background: var(--primary);
-            color: black;
+            padding: 2rem;
+            border-radius: 12px;
             text-align: center;
-            padding: 1rem;
+            border: 1px solid #333;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 65, 0.1);
+        }
+        .product-card h3 { color: var(--primary); margin-top: 0; }
+        .price { font-size: 1.5rem; font-weight: bold; margin: 1rem 0; }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: black;
+            padding: 0.8rem 1.5rem;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 2rem;
             border-radius: 5px;
+            transition: 0.3s;
         }
-        .enigma-box {
-            background: #222;
-            padding: 1rem;
-            margin-top: 2rem;
-            border: 1px dashed var(--primary);
-        }
+        .btn:hover { background: #00cc33; }
+        .btn-secondary { background: transparent; border: 1px solid var(--primary); color: var(--primary); }
+
+        .badge { background: var(--accent); padding: 0.2rem 0.6rem; font-size: 0.7rem; border-radius: 20px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>PORTAL A RUPTURA</h1>
-    <p>Saindo da CLT para a Soberania Digital em 2026</p>
+    <p>Acelerando sua transição da CLT para a Economia Digital 2026</p>
 </header>
 
 <div class="container">
     
     <div class="daily-briefing">
-        <span class="badge">MISSION BRIEFING - 17/01</span>
-        <h3>"Seu emprego atual é o aluguel da sua liberdade. Quando você vai comprar a casa?"</h3>
+        <h3>💡 INSIGHT DO DIA</h3>
+        <p>"A segurança da CLT é uma ilusão que custa o seu tempo. A liberdade digital é um esforço que compra a sua vida."</p>
     </div>
 
-    <h2>📡 RADAR DE TENDÊNCIAS 2026</h2>
+    <h2 style="text-align: center;">🚀 ESTEIRA DE ACELERAÇÃO</h2>
     <div class="grid">
-        <div class="card">
-            <span class="badge">NOTÍCIA</span>
-            <h4>IA vs CLT: 15% das vagas de RH extintas</h4>
-            <p>A automação chegou ao nível estratégico. Quem não domina a máquina, será substituído por ela.</p>
+        
+        <div class="product-card">
+            <div>
+                <span class="badge">NÍVEL 1: FUNDAMENTOS</span>
+                <h3>E-book Liberdade Financeira</h3>
+                <p>O mapa completo para quem quer começar do zero e entender as regras do jogo digital.</p>
+            </div>
+            <div>
+                <div class="price">R$ 197,00</div>
+                <a href="https://liberdade-financeira-gfojxh.abacusai.app/vendas" class="btn">INICIAR TRANSIÇÃO</a>
+            </div>
         </div>
-        <div class="card">
-            <span class="badge">MERCADO</span>
-            <h4>O Boom dos Infoprodutos</h4>
-            <p>Vender conhecimento é o modelo de negócio com maior margem de lucro deste ano.</p>
+
+        <div class="product-card">
+            <div>
+                <span class="badge" style="background: #0088ff;">NÍVEL 2: EXECUÇÃO</span>
+                <h3>Profissional Digital</h3>
+                <p>Domine as ferramentas práticas e estratégias de venda direta via Hotmart.</p>
+            </div>
+            <div>
+                <a href="https://pay.hotmart.com/S104320910K" class="btn btn-secondary">DETALHES DO CURSO</a>
+            </div>
         </div>
+
+        <div class="product-card">
+            <div>
+                <span class="badge" style="background: #ffd700; color: black;">NÍVEL 3: SOBERANIA</span>
+                <h3>Mestria em Infoprodutos</h3>
+                <p>Escala máxima. Aprenda a criar, validar e automatizar seu próprio império digital.</p>
+            </div>
+            <div>
+                <a href="https://pay.hotmart.com/U104438092Y" class="btn btn-secondary">QUERO O PRÓXIMO NÍVEL</a>
+            </div>
+        </div>
+
     </div>
 
-    <a href="https://liberdade-financeira-gfojxh.abacusai.
+</div>
+
+</body>
+</html>
