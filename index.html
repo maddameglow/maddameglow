@@ -3,178 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maddame Glow | O Protocolo da Pele Eterna</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Portal A Ruptura | Hub de Liberdade Digital</title>
     <style>
         :root {
-            --gold: #C5A059;
-            --gold-light: #F5E6D3;
-            --dark: #2D1E17;
-            --cream: #FFFDF9;
-            --white: #FFFFFF;
+            --primary: #00ff41; /* Verde Matrix/Sucesso */
+            --bg: #0a0a0a;
+            --card: #1a1a1a;
+            --text: #ffffff;
         }
-        
-        body { 
-            background-color: var(--cream); 
-            color: var(--dark); 
-            font-family: 'Montserrat', sans-serif; 
-            margin: 0; padding: 0; line-height: 1.6;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
         }
-
-        .container { max-width: 450px; margin: 0 auto; padding: 0 20px; text-align: center; }
-
-        /* BARRA DE URGÊNCIA */
-        .top-bar { 
-            background: var(--dark); color: var(--gold-light); 
-            font-size: 10px; padding: 8px 0; letter-spacing: 2px; text-transform: uppercase;
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
         }
-
-        /* HEADER */
-        .header { padding: 40px 0 20px; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 32px; font-style: italic; font-weight: 700; margin: 0; }
-        
-        /* HERO SECTION */
-        .hero { margin-bottom: 40px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 36px; line-height: 1.1; margin: 20px 0; }
-        .glow-text { background: linear-gradient(135deg, #C5A059 0%, #8C6A32 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; }
-        .headline-sub { font-size: 14px; color: #666; font-style: italic; margin-top: -10px; }
-
-        /* SEÇÃO DE CONVERSÃO (O CARD MÁGICO) */
-        .convert-card { 
-            background: var(--white); border: 1px solid var(--gold-light); 
-            padding: 30px 20px; border-radius: 4px;
-            box-shadow: 0 20px 50px rgba(45, 30, 23, 0.1);
-            position: relative; z-index: 10;
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 1rem;
         }
-        .exclusive-badge {
-            background: var(--gold); color: white; font-size: 9px; padding: 4px 12px;
-            border-radius: 50px; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-            letter-spacing: 1px; font-weight: 600;
+        /* Widget Mensagem Diária */
+        .daily-briefing {
+            background: var(--card);
+            border-left: 5px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
         }
-
-        .benefit-list { text-align: left; font-size: 13px; margin: 20px 0; padding: 0; list-style: none; }
-        .benefit-list li { margin-bottom: 10px; display: flex; align-items: center; }
-        .benefit-list li::before { content: '✓'; color: var(--gold); font-weight: bold; margin-right: 10px; }
-
-        input { 
-            width: 100%; padding: 18px; margin-bottom: 15px; border: 1px solid #EAEAEA; 
-            border-radius: 4px; box-sizing: border-box; font-size: 14px;
+        /* Seção de Notícias/Tendências */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
-
-        .cta-button { 
-            background: var(--dark); color: var(--gold-light); padding: 22px; 
-            width: 100%; border: none; border-radius: 4px; font-weight: 600;
-            text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
-            transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: 0.3s;
         }
-        .cta-button:hover { background: var(--gold); color: var(--white); }
-
-        /* PROVA SOCIAL / DEPOIMENTOS */
-        .social-proof { margin: 60px 0; }
-        .testimonial { font-style: italic; font-family: 'Playfair Display'; font-size: 18px; color: #444; margin-bottom: 30px; }
-        .stars { color: var(--gold); margin-bottom: 10px; font-size: 14px; }
-
-        /* SEÇÃO BENEFÍCIOS REAIS */
-        .features { background: #F9F6F2; padding: 40px 20px; margin: 0 -20px; text-align: left; }
-        .feature-item h4 { font-family: 'Playfair Display'; margin-bottom: 5px; color: var(--dark); }
-        .feature-item p { font-size: 13px; color: #666; margin-top: 0; }
-
-        /* PODCAST SECTION (HIDDEN) */
-        .unlocked-content { padding: 40px 20px; border: 2px solid var(--gold); margin-top: 20px; }
-        
-        footer { padding: 60px 0; font-size: 10px; opacity: 0.6; letter-spacing: 1px; }
-
-        .hidden { display: none; }
+        .card:hover { border: 1px solid var(--primary); }
+        .badge {
+            background: var(--primary);
+            color: black;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        /* Botão de Conversão */
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: var(--primary);
+            color: black;
+            text-align: center;
+            padding: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2rem;
+            border-radius: 5px;
+        }
+        .enigma-box {
+            background: #222;
+            padding: 1rem;
+            margin-top: 2rem;
+            border: 1px dashed var(--primary);
+        }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">Workshop Gratuito: Vagas Limitadas para Fevereiro/2026</div>
+<header>
+    <h1>PORTAL A RUPTURA</h1>
+    <p>Saindo da CLT para a Soberania Digital em 2026</p>
+</header>
 
-    <div class="container">
-        <header class="header">
-            <h1 class="logo">maddame glow</h1>
-        </header>
-
-        <section class="hero">
-            <h1>Recupere o viço da sua pele em <span class="glow-text">21 dias.</span></h1>
-            <p class="headline-sub">O segredo das mulheres que não aparentam a idade que têm.</p>
-        </section>
-
-        <div id="capture-section" class="convert-card">
-            <span class="exclusive-badge">ACESSO EXCLUSIVO</span>
-            <h2>Protocolo Skin Secrets</h2>
-            <p style="font-size: 13px; color: #666;">Cadastre-se para assistir ao Workshop e baixar o Guia de Ativos que as marcas populares escondem de você.</p>
-            
-            <ul class="benefit-list">
-                <li>Como eliminar o aspecto de "pele cansada"</li>
-                <li>O guia de massagem lifting (Gua Sha)</li>
-                <li>Diferença entre hidratar e nutrir sua célula</li>
-            </ul>
-
-            <form id="leadForm">
-                <input type="text" placeholder="Seu nome" required>
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit" class="cta-button">Quero acesso gratuito</button>
-            </form>
-            <p style="font-size: 9px; color: #999; margin-top: 15px;">🔒 Seus dados estão seguros. Odiamos spam.</p>
-        </div>
-
-        <div id="podcast-section" class="unlocked-content hidden">
-            <h2 style="font-family: 'Playfair Display';">Aula Liberada! 📽️</h2>
-            <div style="background: #000; height: 200px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 20px;">
-                <p>[ VÍDEO DO WORKSHOP ]</p>
-            </div>
-            <p style="font-size: 14px; font-weight: 600;">Ouça o áudio complementar do protocolo:</p>
-            <audio id="player" controls style="width: 100%; margin-bottom: 30px;">
-                <source src="https://drive.google.com/uc?export=download&id=1Cu2MnOqP4UOKEgFyHgD3QHJ3XAqtM2bt" type="audio/mpeg">
-            </audio>
-            
-            <div style="background: var(--gold-light); padding: 20px; margin-bottom: 30px;">
-                <p style="font-size: 13px; margin: 0;"><b>OFERTA ESPECIAL:</b> Garanta o kit completo com 30% OFF apenas hoje.</p>
-            </div>
-            
-            <a href="https://go.hotmart.com/S104320910K" class="cta-button" style="text-decoration: none; display: block;">Garantir meu Kit Maddame Glow</a>
-        </div>
-
-        <section class="social-proof">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial">"Eu já tinha tentado de tudo, até preenchimento. Só o método da Maddame devolveu a luminosidade natural da minha pele."</p>
-            <p style="font-size: 12px; font-weight: 600; text-transform: uppercase;">— Helena M., 42 anos</p>
-        </section>
-
-        <section class="features">
-            <div class="feature-item">
-                <h4>Ciência, não promessas.</h4>
-                <p>Nossa fórmula foca na renovação celular profunda, agindo onde os cremes comuns não chegam.</p>
-            </div>
-            <div class="feature-item">
-                <h4>Estética Old Money</h4>
-                <p>O foco é a beleza natural. Uma pele tão perfeita que você sentirá prazer em sair sem maquiagem.</p>
-            </div>
-        </section>
-
-        <section style="text-align: left; margin-top: 40px;">
-            <h3 style="font-family: 'Playfair Display'; font-size: 18px;">Dúvidas frequentes</h3>
-            <p style="font-size: 12px;"><b>Serve para pele oleosa?</b> Sim, o protocolo equilibra a produção sebácea natural.</p>
-            <p style="font-size: 12px;"><b>Em quanto tempo vejo resultados?</b> Os primeiros sinais de viço aparecem em 7 dias.</p>
-        </section>
-
-        <footer>
-            MADDAME GLOW &copy; 2026<br>
-            A marca da mulher que investe em si mesma.
-        </footer>
+<div class="container">
+    
+    <div class="daily-briefing">
+        <span class="badge">MISSION BRIEFING - 17/01</span>
+        <h3>"Seu emprego atual é o aluguel da sua liberdade. Quando você vai comprar a casa?"</h3>
     </div>
 
-    <script>
-        document.getElementById('leadForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Simulação de conversão
-            document.getElementById('capture-section').classList.add('hidden');
-            document.getElementById('podcast-section').classList.remove('hidden');
-            window.scrollTo(0, 0);
-            document.getElementById('player').play();
-        });
-    </script>
-</body>
-</html>
+    <h2>📡 RADAR DE TENDÊNCIAS 2026</h2>
+    <div class="grid">
+        <div class="card">
+            <span class="badge">NOTÍCIA</span>
+            <h4>IA vs CLT: 15% das vagas de RH extintas</h4>
+            <p>A automação chegou ao nível estratégico. Quem não domina a máquina, será substituído por ela.</p>
+        </div>
+        <div class="card">
+            <span class="badge">MERCADO</span>
+            <h4>O Boom dos Infoprodutos</h4>
+            <p>Vender conhecimento é o modelo de negócio com maior margem de lucro deste ano.</p>
+        </div>
+    </div>
+
+    <a href="https://liberdade-financeira-gfojxh.abacusai.
