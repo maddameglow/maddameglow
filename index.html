@@ -1,172 +1,811 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal A Ruptura | Hub de Soberania Digital</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Liberdade Financeira Digital | Ganhe R$10.000/mês Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --primary: #00ff41; 
-            --bg: #050505;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.1);
-            --text: #ffffff;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            background-image: radial-gradient(circle at 50% -20%, #003310 0%, transparent 50%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
         }
 
-        .container { max-width: 1200px; margin: auto; padding: 2rem; }
-
-        /* HEADER COM IMAGEM DE CAMADA */
-        .hero {
-            text-align: center;
-            padding: 6rem 1rem;
-            background: linear-gradient(to bottom, transparent, var(--bg)), 
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80'); /* Imagem Tech Cyber */
-            background-size: cover;
-            background-position: center;
-            border-radius: 20px;
-            margin-bottom: 3rem;
-        }
-
-        .hero h1 { font-size: 4rem; font-weight: 900; margin: 0; letter-spacing: -3px; }
-        
-        /* GRID DE CAMADAS (NOTÍCIAS E TENDÊNCIAS) */
-        .section-title { color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem; display: block; }
-
-        .radar-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
-
-        .glass-card {
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border);
-            border-radius: 15px;
-            padding: 2rem;
-            transition: 0.3s;
-        }
-
-        .glass-card:hover { border-color: var(--primary); background: rgba(0, 255, 65, 0.02); }
-
-        /* CAIXA DE ENIGMA INTERATIVO */
-        .enigma-section {
-            background: linear-gradient(45deg, #0a0a0a, #111);
-            border: 2px solid var(--primary);
-            border-radius: 15px;
-            padding: 3rem;
-            text-align: center;
-            margin-bottom: 4rem;
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
-        }
-
-        .enigma-input {
-            background: transparent;
-            border: none;
-            border-bottom: 2px solid var(--primary);
-            color: white;
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 10px;
-            width: 80%;
-            max-width: 300px;
-            outline: none;
-        }
-
-        /* ESTEIRA DE VENDAS */
-        .sales-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .price-tag { font-size: 2rem; font-weight: 900; color: var(--primary); margin: 1.5rem 0; }
-
-        .btn {
-            display: block;
-            background: var(--primary);
+        .gradient-btn {
+            background: linear-gradient(to right, #eab308, #f97316);
             color: #000;
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(234, 179, 8, 0.2);
+        }
+
+        .gradient-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(234, 179, 8, 0.3);
+        }
+
+        .countdown-timer {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .countdown-item {
             text-align: center;
-            padding: 1.2rem;
-            text-decoration: none;
-            font-weight: 900;
-            border-radius: 5px;
+        }
+
+        .countdown-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #eab308;
+        }
+
+        .countdown-label {
+            font-size: 12px;
+            color: #999;
             text-transform: uppercase;
         }
 
+        .module-card {
+            background: rgba(30, 30, 50, 0.8);
+            border: 1px solid rgba(234, 179, 8, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            transition: all 0.3s ease;
+        }
+
+        .module-card:hover {
+            border-color: rgba(234, 179, 8, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .bonus-card {
+            background: rgba(30, 30, 50, 0.6);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .bonus-card:hover {
+            border-color: rgba(0, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        .testimonial-card {
+            background: rgba(30, 30, 50, 0.8);
+            border-left: 4px solid #eab308;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 16px 0;
+        }
+
+        .pricing-card {
+            background: rgba(30, 30, 50, 0.9);
+            border: 2px solid rgba(234, 179, 8, 0.3);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.popular {
+            border-color: #eab308;
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(234, 179, 8, 0.2);
+        }
+
+        .pricing-card:hover {
+            border-color: #eab308;
+            transform: translateY(-10px);
+        }
+
+        .badge-popular {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #eab308;
+            color: #000;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .faq-item {
+            background: rgba(30, 30, 50, 0.6);
+            border: 1px solid rgba(234, 179, 8, 0.2);
+            border-radius: 8px;
+            margin: 12px 0;
+            overflow: hidden;
+        }
+
+        .faq-header {
+            padding: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-header:hover {
+            background: rgba(234, 179, 8, 0.1);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 16px;
+        }
+
+        .faq-content.active {
+            max-height: 500px;
+            padding: 16px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        .hero-title .highlight {
+            color: #eab308;
+        }
+
+        .red-banner {
+            background: #ef4444;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .avatar-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #eab308, #f97316);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: 60px 20px;
+        }
+
+        .container-max {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         @media (max-width: 768px) {
-            .radar-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+
+            .countdown-number {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Red Banner with Offer -->
+    <div class="red-banner">
+        🔥 OFERTA ESPECIAL: 50% OFF - De R$397 por apenas R$197
+        <div class="countdown-timer" style="margin-top: 10px;">
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">23</div>
+                <div class="countdown-label">Horas</div>
+            </div>
+            <div style="color: #eab308; font-size: 20px;">:</div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">59</div>
+                <div class="countdown-label">Min</div>
+            </div>
+            <div style="color: #eab308; font-size: 20px;">:</div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">58</div>
+                <div class="countdown-label">Seg</div>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
-    
-    <header class="hero">
-        <span class="section-title">Acesso Concedido // 2026</span>
-        <h1>DEIXE O SISTEMA.<br><span style="color: var(--primary);">ASSUMA O COMANDO.</span></h1>
+    <!-- Header -->
+    <header class="bg-black/50 backdrop-blur-md sticky top-0 z-50 border-b border-yellow-500/20">
+        <div class="container-max flex justify-between items-center py-4 px-4">
+            <div class="flex items-center gap-2">
+                <span style="color: #eab308; font-size: 24px;">💰</span>
+                <h1 class="text-xl font-bold">Liberdade Financeira Digital</h1>
+            </div>
+            <button class="gradient-btn" onclick="scrollToCheckout()">QUERO O CURSO</button>
+        </div>
     </header>
 
-    <span class="section-title">01. Inteligência de Mercado</span>
-    <div class="radar-grid">
-        <div class="glass-card">
-            <h3>A Morte da CLT Tradicional</h3>
-            <p>Relatórios de Janeiro de 2026 indicam que a transição para o trabalho baseado em performance e ativos digitais atingiu o ápice. Quem não cria ativos, está financiando o império de terceiros.</p>
+    <!-- Hero Section -->
+    <section class="section-padding bg-gradient-to-b from-black to-slate-900">
+        <div class="container-max text-center">
+            <div style="color: #00ff00; font-size: 14px; margin-bottom: 20px;">✓ +1.200 alunos satisfeitos</div>
+            
+            <h2 class="hero-title">
+                O Método <span class="highlight">Passo a Passo</span> para<br>
+                Faturar <span class="highlight">R$10.000/mês</span> Online
+            </h2>
+            
+            <p style="font-size: 18px; color: #ccc; margin: 20px 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Saia do <strong style="color: #ef4444;">ZERO</strong> e construa um negócio digital lucrativo em <strong style="color: #00ff00;">90 dias</strong>, mesmo que você não saiba nada de internet.
+            </p>
+
+            <!-- Podcast Section -->
+            <div style="background: rgba(30, 30, 50, 0.8); border: 1px solid rgba(234, 179, 8, 0.3); border-radius: 16px; padding: 40px; margin: 40px 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <div style="color: #ef4444; font-size: 12px; margin-bottom: 20px;">● PODCAST EXCLUSIVO</div>
+                
+                <div style="display: flex; justify-content: center; gap: 40px; margin: 30px 0;">
+                    <div class="avatar-circle" style="background: linear-gradient(135deg, #eab308, #f97316);">👨‍💼</div>
+                    <div style="width: 100px; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 100%; height: 4px; background: repeating-linear-gradient(90deg, #eab308 0px, #eab308 8px, transparent 8px, transparent 16px);"></div>
+                    </div>
+                    <div class="avatar-circle" style="background: linear-gradient(135deg, #ec4899, #a855f7);">👩‍💻</div>
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 20px;">
+                    <div>
+                        <div style="font-weight: bold;">Rafael</div>
+                        <div style="font-size: 12px; color: #999;">Mentor</div>
+                    </div>
+                    <div>
+                        <div style="font-weight: bold;">Ana</div>
+                        <div style="font-size: 12px; color: #999;">Co-host</div>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 20px; font-weight: bold; margin: 20px 0;">Como Faturar R$10.000/mês Online</h3>
+                <p style="font-size: 12px; color: #999;">O método completo revelado</p>
+
+                <div style="background: rgba(0, 0, 0, 0.5); border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 12px;">
+                        <span>0:00</span>
+                        <span>3:00</span>
+                    </div>
+                    <div style="width: 100%; height: 4px; background: rgba(234, 179, 8, 0.2); border-radius: 2px; margin-bottom: 20px;">
+                        <div style="width: 30%; height: 100%; background: #eab308; border-radius: 2px;"></div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #eab308, #f97316); border: none; cursor: pointer; font-size: 24px; display: inline-flex; align-items: center; justify-content: center;">▶</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; font-size: 12px;">
+                    <span>🎧 Episódio Especial</span>
+                    <span>⏱️ 3 min</span>
+                    <span style="color: #ef4444;">🔥 Gratuito</span>
+                </div>
+            </div>
+
+            <p style="font-size: 14px; color: #999; margin: 20px 0;">👆 Aperte o play e descubra como pessoas comuns estão faturando de R$5.000 a R$30.000/mês</p>
+
+            <button class="gradient-btn" onclick="scrollToCheckout()" style="font-size: 16px; padding: 14px 32px; margin-top: 20px;">QUERO COMEÇAR AGORA</button>
+
+            <p style="font-size: 12px; color: #999; margin-top: 20px;">🔒 Compra 100% segura | Garantia de 7 dias</p>
         </div>
-        <div class="glass-card">
-            <span style="color: var(--primary);">● LIVE UPDATE</span>
-            <p>IA generativa reduziu em 40% a necessidade de cargos operacionais. O foco agora é <b>Estratégia e Escala</b>.</p>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="section-padding">
+        <div class="container-max">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 40px;">Você está cansado de...</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✗</div>
+                    <p>Trabalhar 8-12 horas por dia para ganhar pouco</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✗</div>
+                    <p>Ver outras pessoas enriquecendo na internet</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✗</div>
+                    <p>Tentar vários negócios que não dão certo</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✗</div>
+                    <p>Não ter tempo para família e lazer</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✗</div>
+                    <p>Depender de um salário que mal paga as contas</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✗</div>
+                    <p>Sentir que está preso sem perspectiva</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="enigma-section">
-        <span class="section-title">02. Desafio do Sucessor</span>
-        <h2>O ENIGMA DA LIBERDADE</h2>
-        <p>"Eu multiplico seu alcance sem aumentar suas horas. Quanto mais você me cria, mais livre você fica. O que sou?"</p>
-        <input type="text" class="enigma-input" placeholder="Sua resposta...">
-        <p><small style="color: #666; margin-top: 10px; display: block;">Dica: Começa com 'I' e é a base da nossa escola.</small></p>
-    </div>
-
-    <span class="section-title">03. Escolha seu Nível de Ruptura</span>
-    <div class="sales-grid">
-        <div class="glass-card">
-            <h3>Manual Liberdade Financeira</h3>
-            <p>O GPS para sair da inércia e faturar seus primeiros R$ 10k online.</p>
-            <div class="price-tag">R$ 197</div>
-            <a href="https://liberdade-financeira-gfojxh.abacusai.app/vendas" class="btn">DESBLOQUEAR ACESSO</a>
+    <!-- Benefits Section -->
+    <section class="section-padding bg-gradient-to-r from-slate-900 to-black">
+        <div class="container-max">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 40px;">Apresentamos o Liberdade Financeira Digital</h2>
+            <p style="font-size: 18px; color: #ccc; margin-bottom: 40px;">O método completo para construir um negócio online lucrativo do zero.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px; border-left: 4px solid #eab308;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✓</div>
+                    <p style="font-weight: bold;">Trabalhar de onde quiser, quando quiser</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px; border-left: 4px solid #eab308;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✓</div>
+                    <p style="font-weight: bold;">Faturar R$10.000+ por mês com consistência</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px; border-left: 4px solid #eab308;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✓</div>
+                    <p style="font-weight: bold;">Ter tempo para família, hobbies e viagens</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px; border-left: 4px solid #eab308;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✓</div>
+                    <p style="font-weight: bold;">Construir um negócio que cresce enquanto dorme</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px; border-left: 4px solid #eab308;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✓</div>
+                    <p style="font-weight: bold;">Ter liberdade financeira e geográfica</p>
+                </div>
+                <div style="padding: 20px; background: rgba(30, 30, 50, 0.6); border-radius: 8px; border-left: 4px solid #eab308;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">✓</div>
+                    <p style="font-weight: bold;">Se tornar referência no seu nicho</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="glass-card">
-            <h3>Mestria Digital</h3>
-            <p>Acelerador de vendas e tráfego pago para escala real.</p>
-            <div class="price-tag" style="color: #888;">NÍVEL II</div>
-            <a href="https://pay.hotmart.com/S104320910K" class="btn" style="background: transparent; color: var(--primary); border: 1px solid var(--primary);">EXPLORAR</a>
+    <!-- Modules Section -->
+    <section class="section-padding">
+        <div class="container-max">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 10px;">O que você vai aprender</h2>
+            <p style="color: #999; margin-bottom: 40px;">27 aulas | 20h 0min de conteúdo</p>
+
+            <div class="module-card">
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="font-size: 40px;">🧠</div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">MÓDULO 1: Mentalidade e Fundamentos</h3>
+                        <p style="color: #ccc; margin-bottom: 10px;">Construa a base mental sólida que você precisa para alcançar R$10.000/mês e muito mais.</p>
+                        <ul style="color: #999; font-size: 14px; list-style: none;">
+                            <li>• As Crenças que Te Mantêm Pobre</li>
+                            <li>• A Mentalidade de Abundância vs Escassez</li>
+                            <li>• O Poder da Consistência e do Compromisso</li>
+                            <li>• Hábitos Diários de Empreendedores de Sucesso</li>
+                            <li>• Mindset de Ação: Do Conhecimento à Implementação</li>
+                        </ul>
+                        <p style="margin-top: 10px; color: #eab308; font-weight: bold;">5 aulas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="font-size: 40px;">💼</div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">MÓDULO 2: Escolhendo Seu Modelo de Negócio</h3>
+                        <p style="color: #ccc; margin-bottom: 10px;">Decida qual caminho seguir e valide seu nicho.</p>
+                        <ul style="color: #999; font-size: 14px; list-style: none;">
+                            <li>• Os 5 Modelos de Negócio Mais Lucrativos</li>
+                            <li>• Marketing de Afiliados - Análise Profunda</li>
+                            <li>• Infoprodutos - Criação e Venda</li>
+                            <li>• Serviços Digitais - Monetização Rápida</li>
+                            <li>• E-commerce e Criação de Conteúdo</li>
+                            <li>• Validação de Nicho e Produto</li>
+                        </ul>
+                        <p style="margin-top: 10px; color: #eab308; font-weight: bold;">6 aulas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="font-size: 40px;">🎨</div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">MÓDULO 3: Criando Seu Primeiro Produto Digital</h3>
+                        <p style="color: #ccc; margin-bottom: 10px;">Do zero ao produto pronto para vender.</p>
+                        <ul style="color: #999; font-size: 14px; list-style: none;">
+                            <li>• Criando Seu E-book em 7 Dias</li>
+                            <li>• Estruturando e Gravando Seu Curso</li>
+                            <li>• Criando Páginas de Venda Persuasivas</li>
+                            <li>• Precificação Estratégica e Posicionamento</li>
+                            <li>• Lançamento: Do Zero às Primeiras Vendas</li>
+                        </ul>
+                        <p style="margin-top: 10px; color: #eab308; font-weight: bold;">5 aulas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="font-size: 40px;">📱</div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">MÓDULO 4: Marketing Orgânico e Viralização</h3>
+                        <p style="color: #ccc; margin-bottom: 10px;">Domine o tráfego gratuito e crie conteúdo que vende.</p>
+                        <ul style="color: #999; font-size: 14px; list-style: none;">
+                            <li>• Dominando o TikTok</li>
+                            <li>• Instagram Reels e Stories</li>
+                            <li>• YouTube Shorts e Conteúdo Longo</li>
+                            <li>• Criação de Conteúdo Viral</li>
+                            <li>• Funil de Conversão: Tráfego → Vendas</li>
+                        </ul>
+                        <p style="margin-top: 10px; color: #eab308; font-weight: bold;">5 aulas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="font-size: 40px;">💎</div>
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">MÓDULO 5: Vendas e Escala</h3>
+                        <p style="color: #ccc; margin-bottom: 10px;">De R$1.000 para R$10.000+/mês.</p>
+                        <ul style="color: #999; font-size: 14px; list-style: none;">
+                            <li>• A Matemática da Escala</li>
+                            <li>• Maximizando Ticket Médio</li>
+                            <li>• Automação Completa de Vendas</li>
+                            <li>• Montando Seu Time Virtual</li>
+                            <li>• Tráfego Pago: Quando e Como</li>
+                            <li>• O Plano de R$1k para R$50k/mês</li>
+                        </ul>
+                        <p style="margin-top: 10px; color: #eab308; font-weight: bold;">6 aulas</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-</div>
+    <!-- Bonus Section -->
+    <section class="section-padding bg-gradient-to-r from-slate-900 to-black">
+        <div class="container-max">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 10px;">Bônus Exclusivos Incluídos</h2>
+            <p style="color: #999; margin-bottom: 40px;">Mais de R$738 em bônus GRATUÍTOS ao se inscrever hoje</p>
 
-<script>
-    // Logica simples para o enigma (apenas visual para o teste)
-    const input = document.querySelector('.enigma-input');
-    input.addEventListener('change', () => {
-        if(input.value.toLowerCase().includes('infoproduto')) {
-            alert('Acesso validado. Você entende o jogo!');
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div class="bonus-card">
+                    <h4 style="font-weight: bold; margin-bottom: 10px;">Templates de Conteúdo Viral</h4>
+                    <p style="color: #eab308; font-weight: bold;">Valor: R$197</p>
+                    <p style="color: #00ff00; margin-top: 10px;">GRÁTIS</p>
+                </div>
+                <div class="bonus-card">
+                    <h4 style="font-weight: bold; margin-bottom: 10px;">Planilha de Planejamento</h4>
+                    <p style="color: #eab308; font-weight: bold;">Valor: R$97</p>
+                    <p style="color: #00ff00; margin-top: 10px;">GRÁTIS</p>
+                </div>
+                <div class="bonus-card">
+                    <h4 style="font-weight: bold; margin-bottom: 10px;">Roteiros de Vídeo</h4>
+                    <p style="color: #eab308; font-weight: bold;">Valor: R$147</p>
+                    <p style="color: #00ff00; margin-top: 10px;">GRÁTIS</p>
+                </div>
+                <div class="bonus-card">
+                    <h4 style="font-weight: bold; margin-bottom: 10px;">Acesso ao Grupo VIP</h4>
+                    <p style="color: #eab308; font-weight: bold;">Valor: R$297</p>
+                    <p style="color: #00ff00; margin-top: 10px;">GRÁTIS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding">
+        <div class="container-max">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 40px;">Resultados Reais de Alunos</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div class="testimonial-card">
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #eab308, #f97316); display: flex; align-items: center; justify-content: center; font-size: 24px;">👨</div>
+                        <div>
+                            <div style="font-weight: bold;">Marcos Oliveira</div>
+                            <div style="color: #eab308; font-weight: bold;">R$15.000/mês</div>
+                            <div style="font-size: 12px; color: #999;">em 90 dias</div>
+                        </div>
+                    </div>
+                    <p style="color: #ccc; font-size: 14px;">"Há 8 meses eu era motorista de app. Hoje trabalho de casa e faturei R$15k no último mês. O método realmente funciona!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #ec4899, #a855f7); display: flex; align-items: center; justify-content: center; font-size: 24px;">👩</div>
+                        <div>
+                            <div style="font-weight: bold;">Carla Mendes</div>
+                            <div style="color: #eab308; font-weight: bold;">R$8.400/mês</div>
+                            <div style="font-size: 12px; color: #999;">em 45 dias</div>
+                        </div>
+                    </div>
+                    <p style="color: #ccc; font-size: 14px;">"Minha primeira venda veio em 12 dias! Chorei de alegria. Agora já são R$8.400 este mês trabalhando de casa."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #06b6d4, #0891b2); display: flex; align-items: center; justify-content: center; font-size: 24px;">👨</div>
+                        <div>
+                            <div style="font-weight: bold;">Rafael Santos</div>
+                            <div style="color: #eab308; font-weight: bold;">R$22.000/mês</div>
+                            <div style="font-size: 12px; color: #999;">em 6 meses</div>
+                        </div>
+                    </div>
+                    <p style="color: #ccc; font-size: 14px;">"Pedi demissão do emprego CLT. Hoje faturei R$22k e tenho liberdade para viajar quando quiser. Melhor investimento da minha vida!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #f472b6, #ec4899); display: flex; align-items: center; justify-content: center; font-size: 24px;">👩</div>
+                        <div>
+                            <div style="font-weight: bold;">Ana Paula Costa</div>
+                            <div style="color: #eab308; font-weight: bold;">R$12.000/mês</div>
+                            <div style="font-size: 12px; color: #999;">em 75 dias</div>
+                        </div>
+                    </div>
+                    <p style="color: #ccc; font-size: 14px;">"Mãe de 2 filhos, trabalho enquanto eles dormem. Já passo dos R$12k e consigo dar uma vida melhor para eles."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-padding bg-gradient-to-r from-slate-900 to-black" id="checkout">
+        <div class="container-max">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 40px; text-align: center;">Escolha seu Caminho</h2>
+            <p style="text-align: center; color: #999; margin-bottom: 40px;">Comece pequeno ou vá direto ao método completo</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto;">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">Primeiros Passos</h3>
+                    <p style="color: #999; margin-bottom: 20px;">O atalho para sua primeira venda</p>
+                    
+                    <div style="margin: 20px 0;">
+                        <p style="color: #999; text-decoration: line-through;">De R$149,99</p>
+                        <p style="font-size: 36px; font-weight: bold; color: #eab308;">R$99,99</p>
+                        <p style="color: #999; font-size: 14px;">Pagamento único</p>
+                    </div>
+
+                    <ul style="text-align: left; color: #ccc; font-size: 14px; margin: 20px 0; list-style: none;">
+                        <li style="margin: 10px 0;">✓ Teste de Perfil Empreendedor</li>
+                        <li style="margin: 10px 0;">✓ 50 Ganchos de Vídeo Prontos</li>
+                        <li style="margin: 10px 0;">✓ 5 Templates de Bio</li>
+                        <li style="margin: 10px 0;">✓ Plano de 21 Dias Detalhado</li>
+                        <li style="margin: 10px 0;">✓ 5 Emails Prontos para Copiar</li>
+                        <li style="margin: 10px 0;">✓ 📚 Guia Bônus: Ferramentas Poderosas</li>
+                        <li style="margin: 10px 0;">✓ 🎧 3 Módulos em Áudio Exclusivos</li>
+                        <li style="margin: 10px 0;">✓ 🎁 R$50 OFF no Curso Completo</li>
+                    </ul>
+
+                    <button class="gradient-btn" onclick="redirectToCheckout('starter')" style="width: 100%; margin-top: 20px;">COMEÇAR POR R$99,99</button>
+                </div>
+
+                <!-- Complete Plan -->
+                <div class="pricing-card popular">
+                    <div class="badge-popular">MAIS POPULAR</div>
+                    <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">Curso Completo</h3>
+                    <p style="color: #999; margin-bottom: 20px;">O método completo para R$10k/mês</p>
+                    
+                    <div style="margin: 20px 0;">
+                        <p style="color: #999; text-decoration: line-through;">De R$297,00</p>
+                        <p style="font-size: 36px; font-weight: bold; color: #eab308;">R$197,00</p>
+                        <p style="color: #999; font-size: 14px;">ou 12x de R$19,70</p>
+                    </div>
+
+                    <ul style="text-align: left; color: #ccc; font-size: 14px; margin: 20px 0; list-style: none;">
+                        <li style="margin: 10px 0;">✓ Tudo do Primeiros Passos +</li>
+                        <li style="margin: 10px 0;">✓ 5 Módulos com 28 Aulas em Áudio</li>
+                        <li style="margin: 10px 0;">✓ +200 Roteiros de Conteúdo</li>
+                        <li style="margin: 10px 0;">✓ Templates de Funil Avançados</li>
+                        <li style="margin: 10px 0;">✓ 📚 Guia Bônus: 50+ Ferramentas de IA</li>
+                        <li style="margin: 10px 0;">✓ 🎯 Mentorias em Grupo Semanais</li>
+                        <li style="margin: 10px 0;">✓ Comunidade VIP Exclusiva</li>
+                        <li style="margin: 10px 0;">✓ Suporte por 90 Dias</li>
+                        <li style="margin: 10px 0;">✓ Atualizações Vitalícias</li>
+                    </ul>
+
+                    <button class="gradient-btn" onclick="redirectToCheckout('complete')" style="width: 100%; margin-top: 20px; font-size: 16px;">QUERO O CURSO COMPLETO</button>
+
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(234, 179, 8, 0.2);">
+                        <p style="font-size: 12px; color: #999;">Garantia 7 dias</p>
+                        <p style="font-size: 12px; color: #999;">12x sem juros</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 20px; background: rgba(234, 179, 8, 0.1); border-radius: 8px; border: 1px solid rgba(234, 179, 8, 0.2);">
+                <p style="font-size: 14px; color: #ccc;">
+                    💡 <strong>Dica:</strong> Quem compra o Primeiros Passos ganha R$50 de desconto no Completo.<br>
+                    R$99,99 + R$147 = R$246,99 (economia de R$100 no total!)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="section-padding">
+        <div class="container-max" style="max-width: 700px; text-align: center;">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px;">Garantia Incondicional de 7 Dias</h2>
+            <p style="font-size: 16px; color: #ccc; line-height: 1.6;">
+                Se por qualquer motivo você não gostar do curso, basta enviar um e-mail em até 7 dias após a compra e devolvemos <strong>100% do seu dinheiro</strong>. Sem perguntas, sem burocracia.
+            </p>
+            <p style="font-size: 16px; color: #ccc; margin-top: 20px; line-height: 1.6;">
+                O risco é TODO nosso. Você não tem nada a perder.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-gradient-to-r from-slate-900 to-black">
+        <div class="container-max" style="max-width: 700px;">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 40px;">Perguntas Frequentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <span>Para quem é este curso?</span>
+                    <span style="font-size: 20px;">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>Este curso é perfeito para qualquer pessoa que deseja construir um negócio digital lucrativo, independentemente de sua experiência anterior. Se você tem vontade de ganhar mais e está disposto a aprender, este é o lugar certo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <span>Preciso de conhecimento prévio?</span>
+                    <span style="font-size: 20px;">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>Não! O curso começa do zero e vai até o nível avançado. Mesmo que você nunca tenha criado um produto digital, você aprenderá tudo passo a passo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <span>Quanto tempo preciso dedicar?</span>
+                    <span style="font-size: 20px;">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>Você pode começar com apenas 1-2 horas por dia. O curso é flexível e você pode estudar no seu próprio ritmo. Muitos alunos conseguem resultados em 30-90 dias.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <span>O curso tem garantia?</span>
+                    <span style="font-size: 20px;">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>Sim! Oferecemos uma garantia incondicional de 7 dias. Se não gostar, devolvemos 100% do seu dinheiro, sem perguntas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <span>Como funciona o acesso?</span>
+                    <span style="font-size: 20px;">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>Após a compra, você recebe acesso imediato a uma plataforma online onde pode assistir a todas as aulas, baixar os materiais e participar da comunidade VIP.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFAQ(this)">
+                    <span>Posso parcelar?</span>
+                    <span style="font-size: 20px;">+</span>
+                </div>
+                <div class="faq-content">
+                    <p>Sim! O Curso Completo pode ser parcelado em até 12x sem juros no cartão de crédito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section-padding">
+        <div class="container-max text-center">
+            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px;">Pronto para Mudar de Vida?</h2>
+            <p style="font-size: 18px; color: #ccc; margin-bottom: 30px;">
+                Daqui a 90 dias, você pode estar no mesmo lugar... ou faturando R$10.000/mês. A escolha é sua.
+            </p>
+            <button class="gradient-btn" onclick="scrollToCheckout()" style="font-size: 18px; padding: 16px 40px;">QUERO COMEÇAR AGORA</button>
+            <p style="font-size: 12px; color: #999; margin-top: 20px;">🔒 Compra 100% segura | Garantia de 7 dias | Acesso imediato</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #000; padding: 40px 20px; text-align: center; border-top: 1px solid rgba(234, 179, 8, 0.2);">
+        <div class="container-max">
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
+                <span style="color: #eab308; font-size: 24px;">💰</span>
+                <span style="font-weight: bold;">Liberdade Financeira Digital</span>
+            </div>
+            <p style="color: #999; font-size: 12px;">© 2026 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+            
+            const diff = target - now;
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
-    });
-</script>
 
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('span:last-child');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-content.active').forEach(el => {
+                if (el !== content) {
+                    el.classList.remove('active');
+                    el.previousElementSibling.querySelector('span:last-child').textContent = '+';
+                }
+            });
+
+            // Toggle current FAQ
+            content.classList.toggle('active');
+            icon.textContent = content.classList.contains('active') ? '−' : '+';
+        }
+
+        // Scroll to checkout
+        function scrollToCheckout() {
+            const element = document.getElementById('checkout');
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Redirect to Hotmart checkout
+        function redirectToCheckout(plan) {
+            if (plan === 'complete') {
+                window.location.href = 'https://hotmart.com/pt-br/marketplace/produtos/liberdade-financeira-digital-o-metodo-completo-para-faturar-r-10-000-mes-online/S104320910K';
+            } else if (plan === 'starter') {
+                window.location.href = 'https://hotmart.com/pt-br/marketplace/produtos/curso-primeiros-passos-comece-sua-jornada-no-digital/X104320910K'; 
+            }
+        }
+    </script>
 </body>
-</html>
+</
